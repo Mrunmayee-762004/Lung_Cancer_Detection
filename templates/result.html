@@ -1,0 +1,19 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <title>Lung Cancer Detection Result</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/style.css') }}">
+</head>
+
+<body>
+    <h1>Prediction Result</h1>
+    <p>Prediction: {{ prediction }}</p>
+    <h2>Uploaded Image</h2>
+    <img src="data:image/jpeg;base64,{{ uploaded_image_base64 }}" alt="Uploaded Image">
+    <h2>XAI Explanation</h2>
+    <img src="data:image/jpeg;base64,{{ explanation_lime_base64 }}" alt="XAI Explanation">
+</body>
+
+</html>
